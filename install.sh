@@ -1,6 +1,6 @@
 #!/bin/bash
 
-bash apt update && apt update && install_reqs.sh
+#bash apt update && apt update && install_reqs.sh
 
 if [ ! "$BASH_VERSION" ] ; then
     echo "ERROR: Please use bash not sh or other shells to run this installer. You can also run this script directly like ./install.sh"
@@ -52,7 +52,10 @@ read
 
 #Install needed packages
 sudo apt update
-sudo apt install vlc rsync sed coreutils fbset ffmpeg openssl procps python3-pygame python3-yaml python3-openssl python3 libraspberrypi-bin -y
+
+#sudo apt install libwebpmux3>=0.6.1-2+deb10u2
+#sudo apt install libavcodec58=7:4.1.11-0+deb10u1+rpt1 libavdevice58=7:4.1.11-0+deb10u1+rpt1 libavfilter7=7:4.1.11-0+deb10u1+rpt1 libavformat58=7:4.1.11-0+deb10u1+rpt1
+sudo apt install rsync sed coreutils fbset openssl procps python3-pygame python3-openssl python3 libraspberrypi-bin -y
 
 if ! is_vlc_mmal_present;then
     echo "Your version of vlc does not have the needed mmal options. Rpisurv needs those"
@@ -61,6 +64,8 @@ if ! is_vlc_mmal_present;then
     echo "Aborting installation, upgrade to latest vlc player with mmal support"
     exit 2
 fi
+
+exit
 
 #Prevent starting up in graphical mode, we do not need this -> save resources
 if [ $SYSTEMD -eq 1 ]; then
