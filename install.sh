@@ -57,6 +57,8 @@ sudo apt update
 #sudo apt install libavcodec58=7:4.1.11-0+deb10u1+rpt1 libavdevice58=7:4.1.11-0+deb10u1+rpt1 libavfilter7=7:4.1.11-0+deb10u1+rpt1 libavformat58=7:4.1.11-0+deb10u1+rpt1
 sudo apt install rsync sed coreutils fbset openssl procps python3-pygame python3-openssl python3 libraspberrypi-bin -y
 
+pip3 install pyyaml==5.4.1
+
 if ! is_vlc_mmal_present;then
     echo "Your version of vlc does not have the needed mmal options. Rpisurv needs those"
     echo "Minimum tested vlc version for Rpisurv is (VLC media player 3.0.11 Vetinari (revision 3.0.11-0-gdc0c5ced72),"
