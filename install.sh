@@ -65,7 +65,7 @@ if ! is_vlc_mmal_present;then
     exit 2
 fi
 
-exit
+
 
 #Prevent starting up in graphical mode, we do not need this -> save resources
 if [ $SYSTEMD -eq 1 ]; then
