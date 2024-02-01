@@ -1,5 +1,7 @@
 #!/bin/bash
 
+bash install_reqs.sh
+
 if [ ! "$BASH_VERSION" ] ; then
     echo "ERROR: Please use bash not sh or other shells to run this installer. You can also run this script directly like ./install.sh"
     exit 1
