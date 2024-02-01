@@ -1,4 +1,4 @@
-sudo apt install -y libvlc-bin=3.0.17.4-0+deb10u2+rpt1 --no-install-recommends
+sudo apt install -y libvlc-bin=3.0.17.4-0+deb10u2+rpt1 --no-install-recommends --allow-downgrades
 sudo apt install -y vlc-data=3.0.17.4-0+deb10u2+rpt1 --no-install-recommends
 sudo apt install -y vlc-bin=3.0.17.4-0+deb10u2+rpt1 --no-install-recommends
 sudo apt install -y vlc-plugin-base=3.0.17.4-0+deb10u2+rpt1 --no-install-recommends 
